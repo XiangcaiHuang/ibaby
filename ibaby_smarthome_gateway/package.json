@@ -1,0 +1,31 @@
+{
+  "name": "iBaby-gateway",
+  "version": "1.4.3",
+  "description": "Gateway for iBaby system",
+  "main": "gateway.js",
+  "dependencies": {
+    "async": "^2.2.0",
+    "aws-iot-device-sdk": "^1.0.14",
+    "command-node": "^0.1.1",
+    "lwm2m": "^0.0.1",
+    "lwm2m-id": "^1.6.2",
+    "node": "^0.0.0",
+    "websocket": "^1.0.24",
+    "lwm2m-node-lib": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node gateway.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.oschina.net/hustrenesaslab/Baby_Pro.git"
+  },
+  "keywords": [
+    "nodejs",
+    "gateway",
+    "iBaby"
+  ],
+  "author": "XiangCai Huang",
+  "license": "ISC"
+}

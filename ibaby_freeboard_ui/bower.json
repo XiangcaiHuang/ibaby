@@ -1,0 +1,28 @@
+{
+  "name": "freeboard",
+  "description": "A damn-sexy, open source real-time dashboard builder for IOT and other web mashups. A free open-source alternative to Geckoboard.",
+  "main": "index.html",
+  "authors": [
+    "Bug Labs"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "iot",
+    "dashboard"
+  ],
+  "homepage": "https://github.com/Freeboard/freeboard",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "moment": "^2.12.0",
+    "cryptojslib": "^3.1.2",
+    "paho-mqtt-js": "^1.0.1",
+    "random": "^1.0.8"
+  }
+}
