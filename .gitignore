@@ -2,6 +2,5 @@ doc/
 cert/
 img/
 node_modules/
-.jshintrc
 .tags
 .tags_sorted_by_file
