@@ -25,7 +25,7 @@ UI for iBaby Smarthome. See ![iBaby Freeboard UI README][35] for more informatio
 
 [0]: ./doc/screenshots/ibaby_function.PNG         "ibaby_function"
 [1]: ./doc/screenshots/system_architecture.PNG    "system_architecture"
-[2]: ./doc/screenshots/freeboard_ui.PNG           "freeboard_ui"
+[2]: ./doc/screenshots/freeboard_ui.png           "freeboard_ui"
 
 [30]: https://github.com/XiangcaiHuang/embarc_applications/tree/master/ibaby_smarthome_multinode    "ibaby_smarthome_multinode"
 [31]: https://www.synopsys.com/dw/ipdir.php?ds=arc_em_starter_kit    "DesignWare ARC EM Starter Kit(EMSK)"
