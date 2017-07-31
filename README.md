@@ -1,7 +1,4 @@
-#iBaby Smarthome Gateway and UI
-***
-* [Overview](#overview)
-* [Usage](#usage)
+# iBaby Smarthome Gateway and UI
 
 ## Overview
 
@@ -10,6 +7,8 @@ This application is designed for **iBaby Infant Sleeping Monitoring System**, yo
 ![ibaby_function][0]
 
 ![system_architecture][1]
+
+![freeboard_ui][2]
 
 * ibaby_smarthome_gateway
 
@@ -21,11 +20,12 @@ UI for iBaby Smarthome. See ![iBaby Freeboard UI README][35] for more informatio
 
 ## Usage
 
-git clone https://github.com/XiangcaiHuang/ibaby.git
+	git clone https://github.com/XiangcaiHuang/ibaby.git
 
 
 [0]: ./doc/screenshots/ibaby_function.PNG         "ibaby_function"
 [1]: ./doc/screenshots/system_architecture.PNG    "system_architecture"
+[1]: ./doc/screenshots/freeboard_ui.PNG           "freeboard_ui"
 
 [30]: https://github.com/XiangcaiHuang/embarc_applications/tree/master/ibaby_smarthome_multinode    "ibaby_smarthome_multinode"
 [31]: https://www.synopsys.com/dw/ipdir.php?ds=arc_em_starter_kit    "DesignWare ARC EM Starter Kit(EMSK)"
