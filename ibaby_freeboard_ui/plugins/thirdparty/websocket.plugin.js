@@ -323,7 +323,7 @@
 								var widgets = [];
 								var widget = {};
 								var widget1= {};
-								pane.title = "Warnning||"+endpoint;
+								pane.title = "Warning||"+endpoint;
 								pane.width = 1;
 								pane.col_width = 1;
 								pane.row = {
