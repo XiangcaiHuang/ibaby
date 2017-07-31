@@ -8,7 +8,10 @@
  
 ## Overview
 
+It's a part of **iBaby Infant Sleeping Monitoring System** as a Gateway of iBaby Smarthome. It connects with EMSK Nodes and help them communicate with AWS IoT, Freeboard UI and with each other.
+
 ## Functions
+
 - LwM2M Server (Communicate with EMSK Nodes)
     - **OTA** based on LwM2M protocol (Supports file transfer over 2k size)
     - **Multi-node** access, connecting and communicating with each other.
