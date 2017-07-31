@@ -71,10 +71,8 @@ function registrationHandler(endpoint, lifetime, version, binding, payload, call
         break;
 
         case "ln":
-            // var uri = '/3311/0/5850';//flag_lamp_work
-            // lwm2mServer.observe(endpoint, uri , observeHandle(endpoint, uri));
-            // var uri = '/3340/0/5800';//warn_cry
-            // lwm2mServer.observe(endpoint, uri , observeHandle(endpoint, uri));
+            var uri = '/3311/0/5850';//flag_lamp_work
+            lwm2mServer.observe(endpoint, uri , observeHandle(endpoint, uri));
         break;
 
         default:

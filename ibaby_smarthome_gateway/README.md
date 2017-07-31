@@ -1,32 +1,51 @@
-# iBaby-gateway-v1.3.1
+# iBaby Smarthome Gateway
 
 ## Index ##
 * [Overview](#overview)
-* [Fuction](#function)
+* [Fuctions](#functions)
 * [Usage](#usage)
-* [Command](#command)
-* [Notice](#notice)
+* [Commands](#commands)
  
-## <a name="overview"/> Overview
+## Overview
 
-## <a name="function"/> Function
+## Functions
 - LwM2M Server (Communicate with EMSK Nodes)
+    - **OTA** based on LwM2M protocol (Supports file transfer over 2k size)
+    - **Multi-node** access, connecting and communicating with each other.
+      Control **Lamp Node** to turn on automatically when the **Wearable Node** detecting baby sleep on his stomach.
+      ( Indirectly control ! Wearable node sends the warnning information to gateway when it detecting exceptional situations,then the gateway transmits the information to lamp node and turns the lamp on.)
 - Http Server (Response to url request locally or remote)
 - Web Socket Server (Communicate with Freeboard locally)
 - AWS Client (Communicate with AWS IOT)
 - Web App (Freeboard)
 
-## <a name="usage"/> Usage
+## Usage
 - Requirements
 
-		linux(Ubuntu17.0.4)
-		nodejs
-- How to start
+        PC or Raspberry Pi with Windows or Linux OS
+		![nodejs][30] installed
 
+    You need an ![AWS][31] account, and create things for ibaby nodes, generate and save the certs for different nodes, and modify specific `config.js`(path: `./ibaby_smarthome_gateway/config.js`) for your project:
+
+        // Configuration of the AWS Iot
+        //--------------------------------------------------
+            config.awsClient = {
+            keyPath: './cert/privateKey.pem' ,
+            certPath: './cert/cert.crt' ,
+            caPath: './cert/rootCA.crt' ,
+            clientId: 'freeboard',
+            region: 'ap-southeast-1',
+        };
+
+- How to Start
+        
 		npm install
-		node gateway.js/npm start
+		node gateway.js / npm start
 
-- Modules
+- Modules Enable
+
+Comments the functional modules that you don't need:
+(path: `./ibaby_smarthome_gateway/gateway.js`):
 
 	    console.log("\n\n*************** iBaby Gateway is starting ***************");
 		clUtils.initialize(commands, 'iBaby-Gateway> ');
@@ -36,7 +55,7 @@
 		awsClient.start(deltaFromAWS);
 
 
-## <a name="command"/> Command
+## Commands
 - LwM2M Server:
 
 	's': 
@@ -130,23 +149,6 @@
         description: '\tPrint the current config of httpServer.',
         handler: clUtils.showConfig(config, 'httpServer')
 
-## <a name="notice"/> Notice
-- You should modify some code in node_modules about lwm2m when you want to use **iBaby-gateway**
 
-		path: iBaby-gateway\node_modules\lwm2m-node-lib\lib\services\server\informationReporting.js
-
-in function observe():
-
-	host: obj.address,
-    port: obj.port,
-	...
-
-modify it to :
-
-    host: (config.ipProtocol === 'udp6')?'::1':'127.0.0.1',
-    port: config.port,
-	...
-
-***
-Date: 2017.6.21     
-Author: Xiangcai Huang
+[30]: https://nodejs.org/en/    "nodejs"
+[31]: https://aws.amazon.com/free/?nc1=h_ls    "AWS"

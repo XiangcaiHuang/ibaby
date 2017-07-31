@@ -47,7 +47,6 @@ config.awsClient = {
 	caPath: './cert/rootCA.crt' ,
 	clientId: 'freeboard',
 	region: 'ap-southeast-1',
-	// debug: true
 };
 
 // Configuration of the http server
