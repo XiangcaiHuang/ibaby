@@ -203,7 +203,7 @@
 								var widgets = [];
 								var widget = {};
 								var widget1= {};
-								pane.title = "体征 ||"+endpoint;
+								pane.title = "Data ||"+endpoint;
 								pane.width = 1;
 								pane.col_width = 1;//长度比例
 								pane.row = {
@@ -228,9 +228,9 @@
 												"chartType":"spline",
 												"title": "",
 												"series1":['datasources["' + ["lan", "state", "reported", endpoint, "3303", "0", "5700"].join('"]["') + '"]'],											
-												"series1label": "体温",
+												"series1label": "Temperature",
 												"series2":['datasources["' + ["lan", "state", "reported", endpoint, "3346", "0", "5700"].join('"]["') + '"]'],											
-												"series2label": "心率"
+												"series2label": "Heartrate"
 											
 											};
 											row[0][col[0]] += 6;
@@ -265,7 +265,7 @@
 								var widgets = [];
 								var widget = {};
 								var widget1= {};
-								pane.title = "控制栏||"+endpoint;
+								pane.title = "Lamp||"+endpoint;
 								pane.width = 1;
 								pane.col_width = 1;
 								pane.row = {
@@ -288,8 +288,8 @@
 												"title": "" ,
 												"value": 'datasources["' + ["lan", "state", "reported", endpoint, Oid, i, "5850"].join('"]["') + '"]',
 												"callback": 'datasources["' + ["lan", "state", "desired", endpoint, Oid, i, "5850"].join('"]["') + '"]',
-												"on_text":  "台灯 ON",
-												"off_text": "台灯 OFF"
+												"on_text":  "ON",
+												"off_text": "OFF"
 											};
 											
 											
@@ -323,7 +323,7 @@
 								var widgets = [];
 								var widget = {};
 								var widget1= {};
-								pane.title = "警报栏||"+endpoint;
+								pane.title = "Warnning||"+endpoint;
 								pane.width = 1;
 								pane.col_width = 1;
 								pane.row = {
@@ -347,8 +347,8 @@
 	                                			widget.settings = {
 													"title":'',
 													"value": 'datasources["' + ["lan", "state", "reported", endpoint, "3338", "0", "5800"].join('"]["') + '"]',
-													"on_text":"异常",
-													"off_text":"正常",
+													"on_text":"abnormal",
+													"off_text":"normal",
 													"data":'datasources["' + ["lan", "state", "reported", endpoint, "3346", "0", "5700"].join('"]["') + '"]'
 												};
 	
@@ -369,8 +369,8 @@
                         		widget.settings = {
 									"title": '',
 									"value":'datasources["' + ["lan", "state", "reported", endpoint, "3339", "0", "5800"].join('"]["') + '"]',
-									"on_text":"异常",
-									"off_text":"正常",
+									"on_text":"abnormal",
+									"off_text":"normal",
 									"data":'datasources["' + ["lan", "state", "reported", endpoint, "3303", "0", "5700"].join('"]["') + '"]'
 								};
 		                    	
@@ -381,8 +381,8 @@
 		            			widget.settings = {
 								"title":'',
 								"value":'datasources["' + ["lan", "state", "reported", endpoint, "3340", "0", "5800"].join('"]["') + '"]',
-								"on_text":"宝宝哭啦",
-								"off_text":"正常"
+								"on_text":"crying",
+								"off_text":"normal"
 							
 								
 								};
@@ -394,8 +394,8 @@
 		            			widget.settings = {
 								"title": '',
 								"value":'datasources["' + ["lan", "state", "reported", endpoint, "3341", "0", "5800"].join('"]["') + '"]',
-								"on_text":"请调整宝宝睡姿",
-								"off_text":"正常"
+								"on_text":"Sleep downward",
+								"off_text":"normal"
 							
 								
 								};	
@@ -406,8 +406,8 @@
 		            			widget.settings = {
 								"title": '',
 								"value":'datasources["' + ["lan", "state", "reported", endpoint, "3342", "0", "5800"].join('"]["') + '"]',
-								"on_text":"宝宝睡醒了",
-								"off_text":"宝宝在睡觉"
+								"on_text":"Awake!",
+								"off_text":"Sleeping"
 							
 								
 								};	
@@ -430,7 +430,7 @@
 								var widgets = [];
 								var widget = {};
 								var widget1= {};
-								pane.title = "小睡眠||"+endpoint;
+								pane.title = "Sleep||"+endpoint;
 								pane.width = 1;
 								pane.col_width = 1;
 								pane.row = {
@@ -455,9 +455,9 @@
 										"chartType":"area",
 										"title": "",
 										"series1":['datasources["' + ["lan", "state", "reported", endpoint, "3300", "0", "5700"].join('"]["') + '"]'],											
-										"series1label": "活动状态",
+										"series1label": "State",
 										"series2":['datasources["' + ["lan", "state", "reported", endpoint, "3323", "0", "5700"].join('"]["') + '"]'],											
-										"series2label": "活动强度"
+										"series2label": "Motion intensity"
 									
 									    };	
 										row[0][col[0]] += 6;
