@@ -28,7 +28,7 @@ var LANConfig = {
 			]
 		},
 		{
-			"title": "连接状态",
+			"title": "CONNECTION STATUS",
 			"width": 1,
 			"row": {
 				"1": 5,
@@ -45,11 +45,11 @@ var LANConfig = {
 				{
 					"type": "interactive_indicator",
 					"settings": {
-						"title": "本地连接",
+						"title": "LOCAL CONNECTION",
 						"value": "datasources[\"lan\"][\"connected\"]",
 						"callback": "datasources[\"lan\"][\"connected\"]",
-						"on_text": "已连接",
-						"off_text": "未连接"
+						"on_text": "CONNECTED",
+						"off_text": "DISCONNECTED"
 					}
 				}
 			]
