@@ -28,7 +28,7 @@ var LANConfig = {
 			]
 		},
 		{
-			"title": "CONNECTION STATUS",
+			"title": "CONNECTION ",
 			"width": 1,
 			"row": {
 				"1": 5,
